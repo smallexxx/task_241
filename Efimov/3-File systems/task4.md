@@ -21,7 +21,7 @@
    - остановил: sudo mdadm --stop /dev/md0
    - зачистил суперблоки: sudo mdadm --zero-superblock /dev/sdb /dev/sdc
    - создал raid1: sudo mdadm --create --verbose /dev/md0 --level=1 --raid-devices=2 /dev/sdb /dev/sdc
-    ![Результат действий 5 пункта](raid0_check.png)
+    ![Результат действий 5 пункта](3.5_punkt.png)
     п.с. он потом до конца засинхронизировался
 
 6. В чём между ними разница?
