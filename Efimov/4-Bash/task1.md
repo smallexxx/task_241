@@ -8,29 +8,31 @@
 
 3. Напишите скрипт который выполнит автоматически действия из блока работы с файлами. ( не забудьте включить set -euo pipefail для того что бы ваш скрипт было удобнее отлаживать. Опишите что включают эти флаги)
 
-#!/bin/bash
+    #!/bin/bash
 
-set -euo pipefail
+    set -euo pipefail
 
-echo "Запуск автоматизации работы с файлами"
+    echo "Запуск автоматизации работы с файлами"
 
-mkdir -p project/config project/data project/scripts
+    mkdir -p project/config project/data project/scripts
 
-echo "Hello, this is a test file" > project/data/info.txt
+    echo "Hello, this is a test file" > project/data/info.txt
 
-cp project/data/info.txt project/config/settings.conf
+    cp project/data/info.txt project/config/settings.conf
 
-touch project/data/temp_file.log
-mv project/data/temp_file.log project/scripts/run.sh
+    touch project/data/temp_file.log
 
-chmod +x project/scripts/run.sh
+    mv project/data/temp_file.log project/scripts/run.
+    
+    chmod +x project/scripts/run.sh
 
-echo "Структура создана успешно"
-ls -R project
+    echo "Структура создана успешно"
+
+    ls -R project
 
 Сверху написан Bash-скрипт для автоматического создания структуры директорий и файлов, который я запускал в консольке
 
 Использованные флаги:
- `set -e`: немедленно прекращает выполнение скрипта, если любая команда завершилась ошибкой
- `set -u`: выдает ошибку, если скрипт обращается к несуществующей переменной
- `set -o pipefail`: возвращает код ошибки, если сбоит любая часть конвейера (pipe), а не только последняя
+- `set -e`: немедленно прекращает выполнение скрипта, если любая команда завершилась ошибкой
+- `set -u`: выдает ошибку, если скрипт обращается к несуществующей переменной
+- `set -o pipefail`: возвращает код ошибки, если сбоит любая часть конвейера (pipe), а не только последняя
